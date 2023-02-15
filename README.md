@@ -1,4 +1,10 @@
-# Bresenham's Line Algorithm Implemented in Go
+# 🥽 Go Experiments
+
+This is a repository to keep all of my Go experiments in one place. Especially when working through tutorials, the project can feel easy to discard yet often contains useful scaffolding or re-usable functions for later projects. 
+
+> Feel free to clone, fork, or even contribute if you wish!
+
+## Bresenham's Line Algorithm Implemented in Go
 
 An implementation of Bresenham's line algorithm written in go, based on the example described in the [Wikipedia Entry](https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm).
 
@@ -11,11 +17,11 @@ In addition to the core line drawing functionality, this package also includes:
 
 Also provided is a method for loading a `.obj` 3d model file into a Polygon - an example of which is described below.
 
-## Examples
+### Examples
 
 To run the example, clone the directory and run `go mod tidy`, and then `go run .`. This will run the example in `main.go` using termbox. This will render the 3d model of a rock in your terminal.
 
-## Contributing
+### Improvements
 
 Feel free to contribute if you would like to take a shot at improving upon, or adding to this little experiment.
 
