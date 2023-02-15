@@ -24,7 +24,7 @@ func GetBooks() []string {
 
 	var books []string
 
-	readFile, err := os.Open("/home/c/Documents/Planner/✅ To-Do/📔Reading List.md")
+	readFile, err := os.Open("/home/c/Documents/Planner/📔Reading List.md")
 
 	if err != nil {
 		fmt.Println(err)
