@@ -10,7 +10,9 @@ require (
 	github.com/go-gl/glfw/v3.3/glfw v0.0.0-20221017161538-93cebf72946b // indirect
 	github.com/go-gl/mathgl v1.0.0 // indirect
 	github.com/gordonklaus/portaudio v0.0.0-20221027163845-7c3b689db3cc // indirect
+	github.com/mattn/go-runewidth v0.0.9 // indirect
 	github.com/mjibson/go-dsp v0.0.0-20180508042940-11479a337f12 // indirect
+	github.com/nsf/termbox-go v1.1.1 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/schollz/logger v1.2.0 // indirect
 	github.com/schollz/wifiscan v1.1.1 // indirect
