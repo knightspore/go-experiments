@@ -9,10 +9,10 @@ import (
 )
 
 const (
-	w            = 512
-	h            = 512
+	w            = 1080
+	h            = 1080
 	fps          = 75
-	circlesCount = 3
+	circlesCount = 10
 )
 
 func main() {
@@ -38,46 +38,50 @@ func main() {
 		circles = append(circles, c)
 	}
 
-	p := NewPlayer([]float32{
-		-0.9, -0.8, 0,
-		-0.9, -0.9, 0,
-		-0.8, -0.9, 0,
-	})
+	/*
+		p := NewPlayer([]float32{
+			-0.9, -0.8, 0,
+			-0.9, -0.9, 0,
+			-0.8, -0.9, 0,
+		})
+	*/
 
 	// Bind Keys
 	r.Window.SetKeyCallback(func(window *glfw.Window, key glfw.Key, scancode int, action glfw.Action, mods glfw.ModifierKey) {
-		u, l, d, r := p.Bounds()
+		// u, l, d, r := p.Bounds()
 		press := action == glfw.Press || action == glfw.Repeat
 		switch {
 		case key == glfw.KeyEscape && press:
 			window.SetShouldClose(true)
-		case key == glfw.KeyA && press:
-			if !l {
-				p.Left()
-			}
-		case key == glfw.KeyD && press:
-			if !r {
-				p.Right()
-			}
-		case key == glfw.KeyW && press:
-			if !u {
-				p.Up()
-			}
-		case key == glfw.KeyS && press:
-			if !d {
-				p.Down()
-			}
+			/*
+				case key == glfw.KeyA && press:
+					if !l {
+						p.Left()
+					}
+				case key == glfw.KeyD && press:
+					if !r {
+						p.Right()
+					}
+				case key == glfw.KeyW && press:
+					if !u {
+						p.Up()
+					}
+				case key == glfw.KeyS && press:
+					if !d {
+						p.Down()
+					}
+			*/
 		}
 	})
 
 	// Render
 	r.Render(fps, func() {
-		p.Draw(gl.LINES)
+		// p.Draw(gl.LINES)
 		gl.Clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
 		gl.UseProgram(*r.Program)
 		for _, cir := range circles {
 			cir.ScreenSaver()
-			cir.Draw(gl.TRIANGLE_FAN)
+			cir.Draw(gl.POINTS)
 		}
 	})
 
