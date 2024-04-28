@@ -34,6 +34,8 @@ Some Ideas:
 
 <!-- TODO: ## Libgen Scraper -->
 
+<!-- TODO: ## HTMX Example -->
+
 <!-- TODO: ## TOTO: A Predicate Logic Parser in Go -->
 
 ## MIDI Experiments
