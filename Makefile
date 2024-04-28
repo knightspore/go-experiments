@@ -5,4 +5,7 @@ opengl:
 	cd opengl && go run .
 
 randombook:
-	cd random-book &&	go run .
+	cd random-book && go run .
+
+libgen: 
+	cd libgen && go run .
