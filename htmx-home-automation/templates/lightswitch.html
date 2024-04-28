@@ -1,0 +1,13 @@
+<ul class="panel">
+  {{range .Lights}}
+  <li
+    id="{{.Name}}"
+    class="lightswitch {{if .On}}on{{else}}off{{end}}"
+    hx-get="/toggle?name={{.Name}}&on={{if .On}}false{{else}}true{{end}}"
+    hx-trigger="click"
+    hx-swap="none"
+  >
+    <h2>{{if .On}}🌝{{else}}🌚{{end}} {{.Name}}</h2>
+  </li>
+  {{end}}
+</ul>

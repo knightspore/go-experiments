@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lightswitch Panel</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.3"
+      integrity="sha384-lVb3Rd/Ca0AxaoZg5sACe8FJKF0tnUgR2Kd7ehUOG5GCcROv5uBIZsOqovBAcWua"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <h1>My Lights</h1>
+    </header>
+    <div id="lights" hx-get="lightswitches" hx-trigger="load,onoff,additem from:body"></div>
+    <div id="form">
+      <h2>Add Light</h2>
+      <form hx-post="/add" hx-target="#result">
+        <label for="name">Light Switch Name</label>
+        <input type="text" name="name" id="name" />
+        <button type="submit">Add</button>
+      </form>
+      <p id="result"></p>
+    </div>
+    <script>
+      document.body.addEventListener("htmx:afterSwap", function (evt) {
+        const form = document.querySelector("form");
+        form.reset();
+      });
+    </script>
+  </body>
+</html>

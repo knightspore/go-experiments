@@ -1,0 +1,85 @@
+:root {
+  --fg: #f5e0dc;
+  --bg: #1e1e2e;
+  --gap: 2rem;
+  --gap-sm: 1rem;
+  --p: var(--gap-sm) var(--gap);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: var(--fg);
+  background-color: var(--bg);
+}
+
+header,
+#lights,
+#form,
+.lightswitch {
+  padding: var(--p);
+}
+
+header > h1 {
+  font-size: var(--gap);
+}
+
+.panel {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: var(--gap-sm);
+}
+
+.lightswitch {
+  transition: all ease-in 100ms;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  color: var(--switch-fg);
+  border: 5px solid var(--switch-fg);
+  border-style: var(--switch-border-style);
+  border-radius: var(--gap-sm);
+}
+
+.on {
+  --switch-fg: #fff;
+  --switch-border-style: solid;
+}
+
+.off {
+  --switch-fg: #333;
+  --switch-border-style: dotted;
+}
+
+div > h2 {
+    font-size: var(--gap);
+    margin-bottom: var(--gap-sm);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  align-items: start;
+  margin-bottom: var(--gap);
+}
+
+input,
+button {
+  font-size: var(--gap-sm);
+  padding: calc(var(--gap-sm) / 2) var(--gap-sm);
+  border-radius: var(--gap-sm);
+  border: 2px solid var(--fg);
+}
+
+button {
+  background-color: var(--fg);
+  color: var(--bg);
+  cursor: pointer;
+}

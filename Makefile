@@ -12,3 +12,6 @@ libgen:
 
 toto:
 	cd toto-predicate-logic && go run .
+
+htmx:
+	cd htmx-home-automation && go run .
