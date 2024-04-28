@@ -34,10 +34,7 @@ type Book struct {
 }
 
 func (b Book) ToString() string {
-	j, err := json.Marshal(b)
-	if err != nil {
-		return ""
-	}
+	j, _ := json.Marshal(b)
 	return string(j)
 }
 
@@ -113,9 +110,10 @@ func (l *LibgenClient) FormatResults(hash string) string {
 	return fmt.Sprintf("[%s]", books)
 }
 
-func (l *LibgenClient) Search(query string) {
+func (l *LibgenClient) Search(query string) string {
 	searchHash := l.SearchHash(query)
 	l.Results[searchHash] = []Book{}
 	url := l.CreateURL(query)
 	l.Scrape(url, searchHash)
+	return l.FormatResults(searchHash)
 }

@@ -78,3 +78,13 @@ func TestLibgenClient(t *testing.T) {
 	})
 
 }
+
+func TestLibgenSearch(t *testing.T) {
+	t.Run("search can be performed", func(t *testing.T) {
+		libgen := NewLibgenClient()
+		results := libgen.Search("test")
+		if !strings.Contains(results, "643") {
+			t.Errorf("got %v want %v", results, "643")
+		}
+	})
+}
