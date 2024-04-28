@@ -32,9 +32,9 @@ Some Ideas:
 - Add support for more advanced 3D file formats, such as STL or PLY\
 - Expand to include circles or ellipses with Bresenham's Algorithm
 
-## Libgen Scraper
+<!-- TODO: ## Libgen Scraper -->
 
-A little go package to search Libgen.is (or Libgen.ru) and scrape results.
+<!-- TODO: ## TOTO: A Predicate Logic Parser in Go -->
 
 ## MIDI Experiments
 
