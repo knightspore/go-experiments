@@ -9,3 +9,6 @@ randombook:
 
 libgen: 
 	cd libgen && go run .
+
+toto:
+	cd toto-predicate-logic && go run .
