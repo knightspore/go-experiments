@@ -2,6 +2,8 @@
 
 A simple voronoi image generator written in Go using only the standard library.
 
+![A simple vornoi diagram in muted colours](image.png)
+
 ## Usage
 
 To create a simple image, open main.go and change the `NUM_POINTS`, `WIDTH` and `HEIGHT` to your liking.
